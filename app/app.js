@@ -6,6 +6,9 @@ const bodyParser = require('body-parser');
 const config = require('../config/index');
 const indexRoutes = require('./routes.js');
 const app = express();
+const swaggerUi = require('swagger-ui-express');
+
+app.use('/api-docs', swaggerUi.serve);
 
 // Allowing the app to read environment variables
 dotenv.config();
